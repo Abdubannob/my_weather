@@ -1,0 +1,298 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    background: url('./weatherImages/weathera.PNG');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 450px;
+    height: 750px;
+    border: 10px solid white;
+    border-radius: 40px;
+    /* margin-left: 20px; */
+    /* background-image: url('./weatherImages/day.PNG'); */
+
+    background-size: cover;
+    background-position: bottom;
+    position: relative;
+    overflow: hidden;
+}
+
+section {
+    width: 100%;
+    height: 90%;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 20px; */
+}
+
+.current {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 20px;
+}
+
+header {
+    width: 100%;
+    height: 60px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.operation {
+    display: flex;
+}
+
+/* header img{
+    z-index: 9;
+} */
+.operation p {
+    font-size: 100px;
+}
+
+.operation span {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.gr {
+    font-size: 60px;
+}
+
+.inp::-webkit-input-placeholder {
+    color: #fff
+}
+
+.cloud {
+    display: flex;
+    flex-direction: column;
+}
+
+.city-name {
+    display: flex;
+    gap: 5px;
+}
+
+.cloud p {
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.vk {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.vk img {
+    width: 40px;
+}
+
+.search {
+    width: 200px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 3px 10px;
+    border: 1px solid#fff;
+    border-left: 2px solid #fff;
+    border-right: 2px solid #fff;
+}
+
+input {
+    background: transparent;
+    outline: none;
+    border: none;
+}
+
+.searching-sytem {
+    width: 40px;
+    border: none;
+    padding-right: 10px;
+}
+
+.humidity {
+    width: 100px;
+    height: 60px;
+    display: flex;
+    gap: 10px;
+    font-size: 24px;
+    align-items: center;
+}
+
+.humidity img {
+    width: 20px;
+
+}
+
+.measure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.chapter {
+    width: 300px;
+    height: 100%;
+    background-color: rgba(233, 177, 104, 0.993);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    left: -300px;
+    top: 0;
+    transition: all .2s linear;
+    z-index: 1;
+}
+
+.icon img {
+    width: 120px;
+}
+
+.lines .img {
+    width: 40px;
+    z-index: 99;
+}
+
+.lines {
+    z-index: 9;
+    width: 60px;
+    color: rgb(16, 76, 243);
+}
+
+.forecast {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 60px;
+    left: 0px;
+    overflow-y: scroll;
+    display: none;
+    padding: 10px 4px;
+}
+
+.forecast::-webkit-scrollbar {
+    background: gray;
+    width: 6px;
+}
+
+.forecast::-webkit-scrollbar-thumb {
+    background-color: rgb(14, 185, 14);
+    border-radius: 20px;
+}
+
+.timelines {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 60px auto;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.forc {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* gap: 20px; */
+}
+
+.forc p {
+    font-size: 40px;
+
+}
+
+.forc img {
+    width: 40px;
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+
+    background: rgb(211, 205, 205);
+}
+
+.gradus {
+    display: flex;
+}
+
+.humidities img {
+    width: 15px;
+    padding-right: 4px;
+}
+
+.gradus p {
+    font-size: 18px;
+    justify-content: end;
+    width: 50px;
+    display: flex;
+
+}
+
+.gradus span {
+    font-size: 12px;
+}
+
+.content h5 {
+    width: 140px;
+}
+
+.content .text {
+    width: 80px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+  h4 a {
+    
+    text-decoration: none;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px rgba(15, 15, 15, 0.5);
+  }
+  h4 a::before {
+    content: attr(data-text);
+    position: absolute;
+    color: var(--clr);
+    width: 0;
+    overflow: hidden;
+    transition: 1s;
+    border-right: 4px solid var(--clr);
+    -webkit-text-stroke: 1px var(--clr);
+  }
+  h4 a:hover::before {
+    width: 60%;
+    filter: drop-shadow(0 0 25px var(--clr))
+  }
+  h4 .as:hover::before {
+    width: 74%;
+    filter: drop-shadow(0 0 25px var(--clr))
+  }
+
+
+ 
+
+
+
